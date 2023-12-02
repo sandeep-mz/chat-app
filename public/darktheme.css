@@ -1,0 +1,39 @@
+label {
+    width: 50px;
+    height: 20px;
+    position: relative;
+    display: block;
+    background-color: #ebebeb;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 1px solid yellow;
+  }
+  
+label:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, #ffcc89, #d8860d);
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  
+.input-toggle{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  
+.input-toggle:checked + label {
+    background: #242424;
+  }
+  
+.input-toggle:checked + label::after {
+    left: 30px;
+    background: linear-gradient(180deg, #777, #3a3a3a);
+  }
+  
